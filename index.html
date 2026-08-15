@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Logarithmic Spiral Calculator</title>
+<title>对数螺旋四边形单元计算器 / Logarithmic Spiral Quadrilateral Cell Calculator</title>
 <style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
 </head>
 <body>
-<iframe sandbox="allow-scripts allow-downloads" referrerpolicy="no-referrer" title="Logarithmic Spiral Calculator" srcdoc="&lt;!doctype html&gt;
+<iframe sandbox="allow-scripts allow-downloads" referrerpolicy="no-referrer" title="对数螺旋四边形单元计算器 / Logarithmic Spiral Quadrilateral Cell Calculator" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Logarithmic Spiral Calculator&lt;/title&gt;
+&lt;title&gt;对数螺旋四边形单元计算器 / Logarithmic Spiral Quadrilateral Cell Calculator&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(
@@ -1194,71 +1194,71 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;/style&gt;
 
   &lt;header class=&quot;lsc-header&quot;&gt;
-    &lt;h1 id=&quot;lsc-title&quot;&gt;对数螺旋四边形单元计算器&lt;/h1&gt;
+    &lt;h1 id=&quot;lsc-title&quot;&gt;对数螺旋四边形单元 / Quadrilateral cells计算器 / Logarithmic Spiral Quadrilateral Cell Calculator&lt;/h1&gt;
     &lt;div class=&quot;lsc-meta text-small&quot;&gt;
-      &lt;span&gt;严格四点几何模型&lt;/span&gt;
+      &lt;span&gt;严格四点几何模型 / Strict four-point geometric model&lt;/span&gt;
       &lt;span class=&quot;lsc-formula&quot;&gt;r(θ) = r₀e&lt;sup&gt;kθ&lt;/sup&gt; · R(θ) = (1 + λ)r(θ)&lt;/span&gt;
     &lt;/div&gt;
   &lt;/header&gt;
 
   &lt;div class=&quot;lsc-layout&quot;&gt;
-    &lt;aside class=&quot;lsc-sidebar&quot; aria-label=&quot;参数与选中单元&quot;&gt;
+    &lt;aside class=&quot;lsc-sidebar&quot; aria-label=&quot;参数与选中单元 / Selected cell / Parameters and selected cell&quot;&gt;
       &lt;section class=&quot;card&quot; aria-labelledby=&quot;lsc-controls-title&quot;&gt;
         &lt;div class=&quot;lsc-card-title&quot;&gt;
           &lt;h2 id=&quot;lsc-controls-title&quot;&gt;参数&lt;/h2&gt;
-          &lt;span class=&quot;text-small&quot;&gt;实时更新&lt;/span&gt;
+          &lt;span class=&quot;text-small&quot;&gt;实时更新 / Live update&lt;/span&gt;
         &lt;/div&gt;
         &lt;div class=&quot;lsc-control-grid&quot;&gt;
           &lt;label class=&quot;lsc-field&quot; for=&quot;lsc-r0&quot;&gt;
-            &lt;span&gt;初始半径 r₀&lt;/span&gt;
+            &lt;span&gt;初始半径 r₀ / Initial radius r₀&lt;/span&gt;
             &lt;span class=&quot;text-small&quot;&gt;mm&lt;/span&gt;
             &lt;input class=&quot;form-control&quot; id=&quot;lsc-r0&quot; name=&quot;r0&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;5000&quot; step=&quot;1&quot; value=&quot;50&quot; inputmode=&quot;decimal&quot; /&gt;
           &lt;/label&gt;
           &lt;label class=&quot;lsc-field&quot; for=&quot;lsc-growth&quot;&gt;
-            &lt;span&gt;增长因子 k&lt;/span&gt;
-            &lt;span class=&quot;text-small&quot;&gt;无量纲&lt;/span&gt;
+            &lt;span&gt;增长因子 k / Growth factor k&lt;/span&gt;
+            &lt;span class=&quot;text-small&quot;&gt;无量纲 / dimensionless&lt;/span&gt;
             &lt;input class=&quot;form-control&quot; id=&quot;lsc-growth&quot; name=&quot;growth&quot; type=&quot;number&quot; min=&quot;-1&quot; max=&quot;1&quot; step=&quot;0.01&quot; value=&quot;0.2&quot; inputmode=&quot;decimal&quot; /&gt;
           &lt;/label&gt;
           &lt;label class=&quot;lsc-field&quot; for=&quot;lsc-cell-count&quot;&gt;
-            &lt;span&gt;单元数量 N&lt;/span&gt;
-            &lt;span class=&quot;text-small&quot;&gt;个&lt;/span&gt;
+            &lt;span&gt;单元数量 N / Cell count N&lt;/span&gt;
+            &lt;span class=&quot;text-small&quot;&gt;个 / cells&lt;/span&gt;
             &lt;input class=&quot;form-control&quot; id=&quot;lsc-cell-count&quot; name=&quot;cell-count&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;80&quot; step=&quot;1&quot; value=&quot;10&quot; inputmode=&quot;numeric&quot; /&gt;
           &lt;/label&gt;
           &lt;label class=&quot;lsc-field&quot; for=&quot;lsc-delta-theta&quot;&gt;
-            &lt;span&gt;单元角度 Δθ&lt;/span&gt;
-            &lt;span class=&quot;text-small&quot;&gt;度&lt;/span&gt;
+            &lt;span&gt;单元角度 Δθ / Cell angle Δθ&lt;/span&gt;
+            &lt;span class=&quot;text-small&quot;&gt;度 / degrees&lt;/span&gt;
             &lt;input class=&quot;form-control&quot; id=&quot;lsc-delta-theta&quot; name=&quot;delta-theta&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;90&quot; step=&quot;1&quot; value=&quot;20&quot; inputmode=&quot;decimal&quot; /&gt;
           &lt;/label&gt;
           &lt;label class=&quot;lsc-field&quot; for=&quot;lsc-lambda&quot;&gt;
-            &lt;span&gt;宽度比例 λ&lt;/span&gt;
-            &lt;span class=&quot;text-small&quot;&gt;无量纲&lt;/span&gt;
+            &lt;span&gt;宽度比例 λ / Width ratio λ&lt;/span&gt;
+            &lt;span class=&quot;text-small&quot;&gt;无量纲 / dimensionless&lt;/span&gt;
             &lt;input class=&quot;form-control&quot; id=&quot;lsc-lambda&quot; name=&quot;lambda&quot; type=&quot;number&quot; min=&quot;0&quot; max=&quot;3&quot; step=&quot;0.05&quot; value=&quot;0.5&quot; inputmode=&quot;decimal&quot; /&gt;
           &lt;/label&gt;
         &lt;/div&gt;
         &lt;div class=&quot;lsc-export-control&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;lsc-export-dxf&quot;&gt;导出 DXF（Fusion 360 草图）&lt;/button&gt;
-          &lt;a id=&quot;lsc-dxf-download&quot; class=&quot;btn btn-ghost lsc-export-download&quot; download hidden&gt;点击下载 DXF 文件&lt;/a&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;lsc-export-dxf&quot;&gt;导出 DXF（Fusion 360 草图） / Export DXF (Fusion 360 Sketch)&lt;/button&gt;
+          &lt;a id=&quot;lsc-dxf-download&quot; class=&quot;btn btn-ghost lsc-export-download&quot; download hidden&gt;点击下载 DXF 文件 / Click to download DXF&lt;/a&gt;
           &lt;span id=&quot;lsc-export-status&quot; class=&quot;lsc-export-status text-small&quot; aria-live=&quot;polite&quot;&gt;&lt;/span&gt;
         &lt;/div&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;card&quot; aria-labelledby=&quot;lsc-selected-title&quot; aria-live=&quot;polite&quot;&gt;
         &lt;div class=&quot;lsc-card-title&quot;&gt;
-          &lt;h2 id=&quot;lsc-selected-title&quot;&gt;选中单元&lt;/h2&gt;
-          &lt;strong id=&quot;lsc-selected-index&quot; class=&quot;lsc-number&quot;&gt;单元 1&lt;/strong&gt;
+          &lt;h2 id=&quot;lsc-selected-title&quot;&gt;选中单元 / Selected cell&lt;/h2&gt;
+          &lt;strong id=&quot;lsc-selected-index&quot; class=&quot;lsc-number&quot;&gt;单元 1 / Cell 1&lt;/strong&gt;
         &lt;/div&gt;
         &lt;dl class=&quot;lsc-edge-list&quot;&gt;
-          &lt;div&gt;&lt;dt&gt;内侧边&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-inner&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
-          &lt;div&gt;&lt;dt&gt;终点宽度&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-end&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
-          &lt;div&gt;&lt;dt&gt;外侧边&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-outer&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
-          &lt;div&gt;&lt;dt&gt;起点宽度&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-start&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;dt&gt;内侧边 / Inner edge&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-inner&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;dt&gt;终点宽度 / End width&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-end&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;dt&gt;外侧边 / Outer edge&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-outer&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;dt&gt;起点宽度 / Start width&lt;/dt&gt;&lt;dd id=&quot;lsc-edge-start&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
         &lt;/dl&gt;
         &lt;dl class=&quot;lsc-detail-grid&quot;&gt;
-          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;角度范围&lt;/dt&gt;&lt;dd id=&quot;lsc-angle-range&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
-          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;内侧起点&lt;/dt&gt;&lt;dd id=&quot;lsc-point-inner-start&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
-          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;内侧终点&lt;/dt&gt;&lt;dd id=&quot;lsc-point-inner-end&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
-          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;外侧终点&lt;/dt&gt;&lt;dd id=&quot;lsc-point-outer-end&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
-          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;外侧起点&lt;/dt&gt;&lt;dd id=&quot;lsc-point-outer-start&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;角度范围 / Angle range&lt;/dt&gt;&lt;dd id=&quot;lsc-angle-range&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;内侧起点 / Inner start point&lt;/dt&gt;&lt;dd id=&quot;lsc-point-inner-start&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;内侧终点 / Inner end point&lt;/dt&gt;&lt;dd id=&quot;lsc-point-inner-end&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;外侧终点 / Outer end point&lt;/dt&gt;&lt;dd id=&quot;lsc-point-outer-end&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
+          &lt;div class=&quot;lsc-detail-item&quot;&gt;&lt;dt&gt;外侧起点 / Outer start point&lt;/dt&gt;&lt;dd id=&quot;lsc-point-outer-start&quot;&gt;—&lt;/dd&gt;&lt;/div&gt;
         &lt;/dl&gt;
       &lt;/section&gt;
     &lt;/aside&gt;
@@ -1266,30 +1266,30 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;main class=&quot;lsc-main&quot;&gt;
       &lt;section class=&quot;card lsc-visual-frame&quot; aria-labelledby=&quot;lsc-visual-title&quot;&gt;
         &lt;div class=&quot;lsc-card-title&quot;&gt;
-          &lt;h2 id=&quot;lsc-visual-title&quot;&gt;结构预览&lt;/h2&gt;
+          &lt;h2 id=&quot;lsc-visual-title&quot;&gt;结构预览 / Structure preview&lt;/h2&gt;
           &lt;div id=&quot;lsc-summary&quot; class=&quot;lsc-summary-line text-small&quot; aria-live=&quot;polite&quot;&gt;
             &lt;span&gt;&lt;strong&gt;10&lt;/strong&gt; 个单元&lt;/span&gt;
-            &lt;span&gt;总转角 &lt;strong&gt;200.00°&lt;/strong&gt;&lt;/span&gt;
+            &lt;span&gt;总转角 / Total rotation &lt;strong&gt;200.00°&lt;/strong&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;svg id=&quot;lsc-svg&quot; role=&quot;img&quot; aria-label=&quot;对数螺旋四边形单元结构图&quot; viewBox=&quot;0 0 640 640&quot; preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;&lt;/svg&gt;
-        &lt;p id=&quot;lsc-view-status&quot; class=&quot;lsc-view-status text-small&quot; aria-live=&quot;polite&quot;&gt;旋转 0° · 缩放 100% · 拖拽空白旋转 · 滚轮缩放 · 空格+拖拽平移&lt;/p&gt;
+        &lt;svg id=&quot;lsc-svg&quot; role=&quot;img&quot; aria-label=&quot;对数螺旋四边形单元 / Quadrilateral cells结构图 / Logarithmic spiral quadrilateral cell structure&quot; viewBox=&quot;0 0 640 640&quot; preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;&lt;/svg&gt;
+        &lt;p id=&quot;lsc-view-status&quot; class=&quot;lsc-view-status text-small&quot; aria-live=&quot;polite&quot;&gt;旋转 0° / Rotation 0° · 缩放 100% / Zoom 100% · 拖拽空白旋转 / drag blank area to rotate · 滚轮缩放 / scroll to zoom · 空格+拖拽平移 / Space + drag to pan&lt;/p&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;card&quot; aria-labelledby=&quot;lsc-table-title&quot;&gt;
         &lt;div class=&quot;lsc-card-title&quot;&gt;
-          &lt;h2 id=&quot;lsc-table-title&quot;&gt;全部单元边长&lt;/h2&gt;
-          &lt;span class=&quot;text-small&quot;&gt;点击编号查看详情&lt;/span&gt;
+          &lt;h2 id=&quot;lsc-table-title&quot;&gt;全部单元边长 / All cell edge lengths&lt;/h2&gt;
+          &lt;span class=&quot;text-small&quot;&gt;点击编号查看详情 / Click a number to view details&lt;/span&gt;
         &lt;/div&gt;
         &lt;div class=&quot;lsc-table-wrap&quot;&gt;
           &lt;table class=&quot;table table-sm lsc-table&quot;&gt;
             &lt;thead&gt;
               &lt;tr&gt;
                 &lt;th scope=&quot;col&quot;&gt;单元&lt;/th&gt;
-                &lt;th scope=&quot;col&quot;&gt;内侧边&lt;/th&gt;
-                &lt;th scope=&quot;col&quot;&gt;终点宽度&lt;/th&gt;
-                &lt;th scope=&quot;col&quot;&gt;外侧边&lt;/th&gt;
-                &lt;th scope=&quot;col&quot;&gt;起点宽度&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;内侧边 / Inner edge&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;终点宽度 / End width&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;外侧边 / Outer edge&lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;起点宽度 / Start width&lt;/th&gt;
               &lt;/tr&gt;
             &lt;/thead&gt;
             &lt;tbody id=&quot;lsc-table-body&quot;&gt;&lt;/tbody&gt;
@@ -1682,7 +1682,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           + Math.max(0, geometry.outerBoundary.length - 1)
           + geometry.innerBoundary.length;
         if (polylineCount === 0 || segmentCount === 0) {
-          elements.exportStatus.textContent = &quot;没有可导出的有效线段&quot;;
+          elements.exportStatus.textContent = &quot;没有可导出的有效线段 / No valid line segments to export&quot;;
           elements.dxfDownload.hidden = true;
           return;
         }
@@ -1690,13 +1690,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (dxfObjectUrl != null) URL.revokeObjectURL(dxfObjectUrl);
         const blob = new Blob([dxf], { type: &quot;application/dxf&quot; });
         dxfObjectUrl = URL.createObjectURL(blob);
-        const filename = `logarithmic-spiral-${params.cellCount}cells-fusion-r14.dxf`;
+        const filename = `logarithmic-spiral-${params.cellCount}cells-fusion-r14-complete.dxf`;
         elements.dxfDownload.href = dxfObjectUrl;
         elements.dxfDownload.download = filename;
-        elements.dxfDownload.textContent = &quot;点击下载 DXF 文件&quot;;
+        elements.dxfDownload.textContent = &quot;点击下载 DXF 文件 / Click to download DXF&quot;;
         elements.dxfDownload.hidden = false;
         elements.dxfDownload.click();
-        elements.exportStatus.textContent = `已生成 ${polylineCount} 个二维 DXF 多段线（共 ${segmentCount} 条线段）；若未自动下载，请点击下方链接`;
+        elements.exportStatus.textContent = `已生成 ${polylineCount} 个二维 DXF 多段线（共 ${segmentCount} 条线段） / Generated ${polylineCount} 2D DXF polylines (${segmentCount} line segments)；若未自动下载，请点击下方链接 / if the download did not start automatically, click the link below`;
       }
 
       function makeSvgElement(tag, attributes = {}) {
@@ -1742,7 +1742,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function updateViewStatus() {
         const rotation = ((cameraState.rotation % 360) + 360) % 360;
-        elements.viewStatus.textContent = `旋转 ${formatNumber(rotation)}° · 缩放 ${formatNumber(cameraState.zoom * 100)}% · 拖拽空白旋转 · 滚轮缩放 · 空格+拖拽平移`;
+        elements.viewStatus.textContent = `旋转 ${formatNumber(rotation)}° / Rotation ${formatNumber(rotation)}° · 缩放 ${formatNumber(cameraState.zoom * 100)}% / Zoom ${formatNumber(cameraState.zoom * 100)}% · 拖拽空白旋转 / drag blank area to rotate · 滚轮缩放 / scroll to zoom · 空格+拖拽平移 / Space + drag to pan`;
       }
 
       function updateCamera() {
@@ -1773,7 +1773,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         );
         elements.svg.append(axisGroup);
 
-        const cameraGroup = makeSvgElement(&quot;g&quot;, { id: &quot;lsc-camera&quot;, &quot;aria-label&quot;: &quot;可旋转结构&quot; });
+        const cameraGroup = makeSvgElement(&quot;g&quot;, { id: &quot;lsc-camera&quot;, &quot;aria-label&quot;: &quot;可旋转结构 / Rotatable structure&quot; });
         elements.svg.append(cameraGroup);
 
         const connectorGroup = makeSvgElement(&quot;g&quot;, { &quot;aria-hidden&quot;: &quot;true&quot; });
@@ -1797,7 +1797,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         );
         cameraGroup.append(boundaryGroup);
 
-        const cellGroup = makeSvgElement(&quot;g&quot;, { &quot;aria-label&quot;: &quot;四边形单元&quot; });
+        const cellGroup = makeSvgElement(&quot;g&quot;, { &quot;aria-label&quot;: &quot;四边形单元 / Quadrilateral cells&quot; });
         geometry.cells.forEach((cell) =&gt; {
           const path = makeSvgElement(&quot;path&quot;, {
             class: `lsc-cell${cell.index === selectedIndex ? &quot; is-selected&quot; : &quot;&quot;}`,
@@ -1805,7 +1805,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &quot;data-cell-index&quot;: cell.index,
             role: &quot;button&quot;,
             tabindex: &quot;0&quot;,
-            &quot;aria-label&quot;: `单元 ${cell.index + 1}，内侧边 ${formatLength(cell.edges[0])}`
+            &quot;aria-label&quot;: `单元 ${cell.index + 1}，内侧边 / Inner edge ${formatLength(cell.edges[0])}`
           });
           path.addEventListener(&quot;pointerenter&quot;, () =&gt; selectCell(cell.index));
           path.addEventListener(&quot;focus&quot;, () =&gt; selectCell(cell.index));
@@ -1833,7 +1833,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function updateSelectedDetails(cell) {
         if (cell == null) return;
-        elements.selectedIndex.textContent = `单元 ${cell.index + 1}`;
+        elements.selectedIndex.textContent = `单元 ${cell.index + 1} / Cell ${cell.index + 1}`;
         elements.angleRange.textContent = `${formatAngle(cell.startAngle)} – ${formatAngle(cell.endAngle)}`;
         elements.edgeInner.textContent = formatLength(cell.edges[0]);
         elements.edgeEnd.textContent = formatLength(cell.edges[1]);
@@ -1951,7 +1951,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           button.className = &quot;lsc-row-select&quot;;
           button.dataset.cellIndex = cell.index;
           button.textContent = String(cell.index + 1);
-          button.setAttribute(&quot;aria-label&quot;, `查看单元 ${cell.index + 1} 详情`);
+          button.setAttribute(&quot;aria-label&quot;, `查看单元 ${cell.index + 1} 详情 / View details for cell ${cell.index + 1}`);
           button.addEventListener(&quot;click&quot;, () =&gt; selectCell(cell.index));
           unitCell.append(button);
           row.append(unitCell);
@@ -1967,7 +1967,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function updateSummary(geometry) {
         const params = readParams();
-        elements.summary.innerHTML = `&lt;span&gt;&lt;strong&gt;${geometry.cells.length}&lt;/strong&gt; 个单元&lt;/span&gt;&lt;span&gt;总转角 &lt;strong&gt;${formatAngle(geometry.totalAngle)}&lt;/strong&gt;&lt;/span&gt;&lt;span&gt;λ = &lt;strong&gt;${formatNumber(params.lambda)}&lt;/strong&gt;&lt;/span&gt;`;
+        elements.summary.innerHTML = `&lt;span&gt;&lt;strong&gt;${geometry.cells.length}&lt;/strong&gt; 个单元&lt;/span&gt;&lt;span&gt;总转角 / Total rotation &lt;strong&gt;${formatAngle(geometry.totalAngle)}&lt;/strong&gt;&lt;/span&gt;&lt;span&gt;λ = &lt;strong&gt;${formatNumber(params.lambda)}&lt;/strong&gt;&lt;/span&gt;`;
       }
 
       function recompute() {
